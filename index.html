@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reimagine</title>
+    <meta name="description"
+        content="Venture studio and technical partner for first-time founders. Build venture-grade MVPs in weeks.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- Technical Loader -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">RT</div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="loader-status">Initializing Systems...</div>
+        </div>
+    </div>
+
+    <!-- Film grain overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Ambient lighting -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="180" height="42" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <!-- Logo Text -->
+                    <text x="5" y="44" font-family="'Inter', sans-serif" font-weight="700" font-size="34" fill="white"
+                        letter-spacing="-1">reimaginetec</text>
+                    <!-- Letter Accents (Subtle) -->
+                    <circle cx="46.5" cy="18" r="4" fill="#6366f1" /> <!-- over 'i' -->
+                </svg>
+            </div>
+            <div class="nav-links">
+                <a href="#process">Process</a>
+                <a href="#services">Execution</a>
+                <a href="#comparison">Proof</a>
+                <a href="#cases">Cases</a>
+                <a href="#lab">Lab</a>
+                <a href="https://calendly.com/satish-reimagine/30min?month=2026-01" target="_blank"
+                    rel="noopener noreferrer" class="nav-cta">Start Sprint</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag reveal-text">
+                    <span class="tag-dot"></span>
+                    <span>Venture Studio</span>
+                </div>
+                <h1 class="hero-title reveal-text" style="transition-delay: 0.1s;">
+                    Go from concept to<br>
+                    <span class="title-accent">venture-ready</span><br>
+                    in 8 weeks
+                </h1>
+                <p class="hero-subtitle reveal-text" style="transition-delay: 0.2s;">
+                    Stop settling for a prototype. We engineer scalable, production-ready systems for founders who
+                    refuse to compromise on quality or time.
+                </p>
+                <div class="hero-actions reveal-item" style="transition-delay: 0.3s;">
+                    <a href="https://calendly.com/satish-reimagine/30min?month=2026-01" target="_blank"
+                        rel="noopener noreferrer" class="btn-glass-primary">
+                        <span>Start Your Sprint</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#process" class="btn-glass-secondary">
+                        <span>View Process</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="hero-visual">
+                <div class="orbital-system" id="orbital-system">
+                    <div class="orbit-node node-1">
+                        <div class="node-content">
+                            <span class="node-icon">⚡</span>
+                            <span class="node-label">Rapid Prototyping</span>
+                        </div>
+                    </div>
+                    <div class="orbit-node node-2">
+                        <div class="node-content">
+                            <span class="node-icon">⚙</span>
+                            <span class="node-label">MVP Engineering</span>
+                        </div>
+                    </div>
+                    <div class="orbit-node node-3">
+                        <div class="node-content">
+                            <span class="node-icon">📊</span>
+                            <span class="node-label">Consultation</span>
+                        </div>
+                    </div>
+                    <div class="orbit-node node-4">
+                        <div class="node-content">
+                            <span class="node-icon">🌸</span>
+                            <span class="node-label">BloomWorks</span>
+                        </div>
+                    </div>
+                    <div class="orbit-center">
+                        <div class="center-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scan-line"></div>
+    </section>
+
+    <!-- 2. Logo Scroll and Authority Bar -->
+    <section class="stack-marquee reveal-section">
+        <div class="tech-marquee-container">
+            <div class="marquee-track">
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/openai-2.svg" alt="OpenAI">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg" alt="Stripe">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+                        alt="PostgreSQL"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg"
+                        alt="TypeScript"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="GCP">
+                </div>
+
+                <!-- Duplicate for loop -->
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/openai-2.svg" alt="OpenAI">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg" alt="Stripe">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+                        alt="PostgreSQL"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg"
+                        alt="TypeScript"></div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React">
+                </div>
+                <div class="marquee-item"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="GCP">
+                </div>
+            </div>
+        </div>
+
+        <!-- Authority Bar Integrated into the scroll flow -->
+        <div class="authority-bar reveal-item">
+            <div class="authority-container">
+                <div class="auth-item">
+                    <span class="auth-value">8 Weeks</span>
+                    <span class="auth-label">Concept to Venture-Ready</span>
+                </div>
+                <div class="auth-divider"></div>
+                <div class="auth-item">
+                    <span class="auth-value">0% Equity</span>
+                    <span class="auth-label">Founder Retention</span>
+                </div>
+                <div class="auth-divider"></div>
+                <div class="auth-item">
+                    <span class="auth-value">USA</span>
+                    <span class="auth-label">Direct Domestic Lead</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. How we build (Process) -->
+    <section id="process" class="process-section reveal-section">
+        <div class="process-spotlight-top"></div>
+        <div class="process-spotlight-header"></div>
+        <div class="section-container">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">How we build</h2>
+                <p class="section-description">Staged de-risking from concept to market</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-node" data-stage="1">
+                    <div class="node-card">
+                        <div class="card-header">
+                            <span class="card-number">01</span>
+                            <span class="card-duration">1 week</span>
+                        </div>
+                        <h3 class="card-title">Ideation & Validation</h3>
+                        <ul class="card-features">
+                            <li>Business model testing</li>
+                            <li>Technical feasibility analysis</li>
+                            <li>Market validation framework</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-node" data-stage="2">
+                    <div class="node-card">
+                        <div class="card-header">
+                            <span class="card-number">02</span>
+                            <span class="card-duration">2–8 weeks</span>
+                        </div>
+                        <h3 class="card-title">Rapid Prototyping</h3>
+                        <ul class="card-features">
+                            <li>Clickable product interfaces</li>
+                            <li>Technical exploration</li>
+                            <li>Investor-ready demo assets</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-node" data-stage="3">
+                    <div class="node-card">
+                        <div class="card-header">
+                            <span class="card-number">03</span>
+                            <span class="card-duration">Custom</span>
+                        </div>
+                        <h3 class="card-title">MVP Build</h3>
+                        <ul class="card-features">
+                            <li>Venture-grade architecture</li>
+                            <li>Zero technical debt</li>
+                            <li>Market-ready deployment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-node" data-stage="4">
+                    <div class="node-card">
+                        <div class="card-header">
+                            <span class="card-number">04</span>
+                            <span class="card-duration">Ongoing</span>
+                        </div>
+                        <h3 class="card-title">Launch & Scale</h3>
+                        <ul class="card-features">
+                            <li>Growth advisory</li>
+                            <li>Network access</li>
+                            <li>Infrastructure support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Execution models with sticky scroll -->
+    <section id="services" class="services-section">
+        <div class="split-layout">
+            <!-- Sticky Left Panel -->
+            <div class="sticky-panel">
+                <div class="panel-content">
+                    <span class="section-label">Capabilities</span>
+                    <h2 class="section-title">Execution Models</h2>
+                    <p class="section-description">
+                        Battle-tested frameworks designed for high-velocity, venture-ready delivery. We don't just build
+                        software; we engineer company-building assets.
+                    </p>
+                    <div class="panel-cta">
+                        <a href="https://calendly.com/satish-reimagine/30min?month=2026-01" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline">Start Sprint <span
+                                class="cta-arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scrollable Right Panel -->
+            <div class="scroll-panel">
+                <!-- Card 1: MVP Engineering -->
+                <div class="execution-card featured">
+                    <div class="card-meta">
+                        <span class="status-dot">●</span>
+                        <span class="status-text">Mission Critical</span>
+                        <span class="card-tag">Production-Ready</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">MVP Engineering</h3>
+                        <p class="card-p">Build market-ready products with venture-grade architecture and zero technical
+                            debt. Designed for scaling from day one.</p>
+                        <ul class="card-points">
+                            <li>Venture-grade technical architecture</li>
+                            <li>Scalable cloud infrastructure (AWS/GCP)</li>
+                            <li>Production-hardened security protocols</li>
+                        </ul>
+                        <div class="card-metrics">
+                            <div class="c-metric">
+                                <span class="c-label">Velocity</span>
+                                <span class="c-val">Extreme</span>
+                            </div>
+                            <div class="c-metric">
+                                <span class="c-label">Ownership</span>
+                                <span class="c-val">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Rapid Prototyping -->
+                <div class="execution-card">
+                    <div class="card-meta">
+                        <span class="status-dot">●</span>
+                        <span class="status-text">Rapid Deploy</span>
+                        <span class="card-tag">2–8 Weeks</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Rapid Prototyping</h3>
+                        <p class="card-p">Transform high-level concepts into tangible, investor-ready digital assets.
+                            Speed is the only currency that matters in pre-seed.</p>
+                        <ul class="card-points">
+                            <li>Clickable high-fidelity prototypes</li>
+                            <li>Technical feasibility audits</li>
+                            <li>Investor-grade pitch demos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Venture Consultation -->
+                <div class="execution-card">
+                    <div class="card-meta">
+                        <span class="status-dot">●</span>
+                        <span class="status-text">Strategic</span>
+                        <span class="card-tag">Advisory</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Venture Consultation</h3>
+                        <p class="card-p">Capital strategy, technical roadmap, and business model validation.
+                            Professional help for your technical blindspots.</p>
+                        <ul class="card-points">
+                            <li>Fundraising technical strategy</li>
+                            <li>Product-market fit calibration</li>
+                            <li>Tech-stack optimization roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: BloomWorks -->
+                <div class="execution-card">
+                    <div class="card-meta">
+                        <span class="status-dot">●</span>
+                        <span class="status-text">Ops Optimization</span>
+                        <span class="card-tag">Utility</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">BloomWorks</h3>
+                        <p class="card-p">Internal tooling and automation layers to streamline core business operations.
+                            Efficiency is your secret scale weapon.</p>
+                        <ul class="card-points">
+                            <li>Business process automation</li>
+                            <li>Custom internal dashboards</li>
+                            <li>ETL and data pipeline architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Proof is in the Comparison -->
+    <section id="comparison" class="comparison-section reveal-section">
+        <div class="section-container">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">The Proof is in the <span class="title-accent">Comparison</span></h2>
+                <p class="section-description">How we outpace traditional models using AI-native engineering and rapid
+                    validation.</p>
+            </div>
+
+            <div class="comparison-layout">
+                <!-- Left: Features Card -->
+                <div class="comparison-features-card">
+                    <div class="features-header">
+                        <span class="features-title">Venture Features</span>
+                    </div>
+                    <div class="features-list">
+                        <div class="feature-item" data-row="0">
+                            <span class="feature-name">AI-Driven Architecture</span>
+                            <span class="info-icon"
+                                data-tooltip="We use AI internally to scaffold, audit, and accelerate engineering by 4x.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="1">
+                            <span class="feature-name">Concept-to-Demo Speed</span>
+                            <span class="info-icon"
+                                data-tooltip="8-week guarantee from initial whiteboard to production-ready system.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="2">
+                            <span class="feature-name">Venture-Grade Scaling</span>
+                            <span class="info-icon"
+                                data-tooltip="Zero-debt architecture designed to handle Series A+ volume from Day 1.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="3">
+                            <span class="feature-name">Capital Efficiency</span>
+                            <span class="info-icon"
+                                data-tooltip="Save up to 70% in burn compared to traditional full-service agencies.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="4">
+                            <span class="feature-name">Rapid Prototyping Lab</span>
+                            <span class="info-icon"
+                                data-tooltip="In-house lab for hardware/software fusion and physical interaction testing.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="5">
+                            <span class="feature-name">Zero Technical Debt</span>
+                            <span class="info-icon"
+                                data-tooltip="Every line of code is audited and documented for your future CTO.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="6">
+                            <span class="feature-name">Full IP Ownership</span>
+                            <span class="info-icon"
+                                data-tooltip="You own 100% of the code, designs, and artifacts. No vendor lock-in.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="7">
+                            <span class="feature-name">Direct Domestic Lead</span>
+                            <span class="info-icon"
+                                data-tooltip="US-based product engineering leads. No translation layers or timezone gaps.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="8">
+                            <span class="feature-name">Fixed Sprint Pricing</span>
+                            <span class="info-icon"
+                                data-tooltip="Predictable flat-fee sprints. No hourly billing surprises or scope creep.">?</span>
+                        </div>
+                        <div class="feature-item" data-row="9">
+                            <span class="feature-name">Technical Diligence Ready</span>
+                            <span class="info-icon"
+                                data-tooltip="Architecture designed to pass rigorous V.C. and enterprise security audits.">?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Comparison Columns -->
+                <div class="comparison-columns">
+                    <!-- Column: Reimagine (Primary) -->
+                    <div class="comparison-column primary">
+                        <div class="column-header">
+                            <span class="column-name">reimaginetec</span>
+                        </div>
+                        <div class="column-rows">
+                            <div class="column-cell" data-row="0"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="1"><span class="cell-text">8 Weeks</span></div>
+                            <div class="column-cell" data-row="2"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="3"><span class="cell-text">High</span></div>
+                            <div class="column-cell" data-row="4"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="5"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="6"><span class="cell-text">100%</span></div>
+                            <div class="column-cell" data-row="7"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="8"><span class="check-icon cyan">✓</span></div>
+                            <div class="column-cell" data-row="9"><span class="check-icon cyan">✓</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Column: Legacy Agency -->
+                    <div class="comparison-column">
+                        <div class="column-header">
+                            <div class="header-badge faded"></div>
+                            <span class="column-name">Legacy Agency</span>
+                        </div>
+                        <div class="column-rows">
+                            <div class="column-cell" data-row="0"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="1"><span class="cell-text">6–9 Months</span></div>
+                            <div class="column-cell" data-row="2"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="3"><span class="cell-text">Low</span></div>
+                            <div class="column-cell" data-row="4"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="5"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="6"><span class="cell-text">Varies</span></div>
+                            <div class="column-cell" data-row="7"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="8"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="9"><span class="cross-icon">✕</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Column: Freelance Pod -->
+                    <div class="comparison-column">
+                        <div class="column-header">
+                            <div class="header-badge faded"></div>
+                            <span class="column-name">Freelance Pod</span>
+                        </div>
+                        <div class="column-rows">
+                            <div class="column-cell" data-row="0"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="1"><span class="cell-text">3–5 Months</span></div>
+                            <div class="column-cell" data-row="2"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="3"><span class="cell-text">Medium</span></div>
+                            <div class="column-cell" data-row="4"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="5"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="6"><span class="cell-text">Fragile</span></div>
+                            <div class="column-cell" data-row="7"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="8"><span class="cross-icon">✕</span></div>
+                            <div class="column-cell" data-row="9"><span class="cross-icon">✕</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Case Study -->
+    <section id="cases" class="cases-section reveal-section">
+        <div class="cases-container">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">Case study</h2>
+            </div>
+            <div class="case-frame reveal-item">
+                <div class="case-content">
+                    <div class="case-meta">
+                        <span class="meta-item">
+                            <span class="meta-label">Project</span>
+                            <span class="meta-value">Ripe.io</span>
+                        </span>
+                        <span class="meta-item">
+                            <span class="meta-label">Domain</span>
+                            <span class="meta-value">AgriTech</span>
+                        </span>
+                        <span class="meta-item">
+                            <span class="meta-label">Timeline</span>
+                            <span class="meta-value">8 weeks</span>
+                        </span>
+                        <span class="meta-item">
+                            <span class="meta-label">Outcome</span>
+                            <span class="meta-value accent-text">Success</span>
+                        </span>
+                    </div>
+                    <div class="case-grid">
+                        <div class="case-block">
+                            <h4 class="block-label">Challenge</h4>
+                            <p class="block-text">High-technical carbon sequestration platform requiring blockchain
+                                integration, carbon tracking calculations, and payment infrastructure for farm bureau
+                                stakeholders</p>
+                        </div>
+                        <div class="case-block">
+                            <h4 class="block-label">Solution</h4>
+                            <p class="block-text">Full-stack prototype with blockchain foundation, real-time carbon
+                                metrics dashboard, and multi-stakeholder payment reconciliation system</p>
+                        </div>
+                        <div class="case-block">
+                            <h4 class="block-label">Impact</h4>
+                            <p class="block-text">Platform delivered under budget in 8 weeks. Secured farm bureau
+                                partnership. Demonstrated technical feasibility for investor conversations</p>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-item">Blockchain</span>
+                        <span class="tech-item">Carbon Tracking</span>
+                        <span class="tech-item">Payment Systems</span>
+                        <span class="tech-item">AgriTech Domain</span>
+                    </div>
+                </div>
+                <div class="case-visual">
+                    <div class="visual-frame">
+                        <div class="frame-vignette"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Spark Vibe (Lab) -->
+    <section id="lab" class="lab-section reveal-section">
+        <div class="section-container">
+            <div class="lab-content reveal-text">
+                <div class="lab-badge">Innovation Lab</div>
+                <h2 class="lab-title">SparkVibe</h2>
+                <p class="lab-description">
+                    Internal R&D pipeline for emerging concepts and novel technologies.
+                    Ventures incubated with intention of spin-out or industry partnership.
+                </p>
+                <div class="lab-card">
+                    <div class="lab-pulse"></div>
+                    <div class="lab-card-content">
+                        <span class="lab-status">Active ventures</span>
+                        <span class="lab-tag">Internal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Ready to build (CTA) and Footer -->
+    <section id="contact" class="cta-section reveal-section">
+        <div class="cta-container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title reveal-text">Ready to build</h2>
+            <div class="cta-actions reveal-item" style="transition-delay: 0.2s;">
+                <a href="https://calendly.com/satish-reimagine/30min?month=2026-01" target="_blank"
+                    rel="noopener noreferrer" class="btn-glass-primary large">
+                    <span>Start reimagining your idea</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://calendly.com/satish-reimagine/30min?month=2026-01" target="_blank"
+                    rel="noopener noreferrer" class="btn-glass-secondary large">
+                    <span>Schedule Call</span>
+                </a>
+            </div>
+            <div class="cta-info reveal-text" style="transition-delay: 0.4s;">
+                <a href="mailto:contact@reimagine.com" class="info-link">contact@reimagine.com</a>
+                <span class="info-divider">·</span>
+                <span class="info-text">United States of America</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-mark">RT</span>
+                <span class="footer-tagline">Venture studio for first-time founders</span>
+            </div>
+            <div class="footer-links">
+                <a href="#process">Process</a>
+                <a href="#services">Execution</a>
+                <a href="#comparison">Proof</a>
+                <a href="#cases">Cases</a>
+                <a href="#lab">Lab</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Reimagine Technology</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
