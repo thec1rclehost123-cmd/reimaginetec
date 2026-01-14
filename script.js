@@ -512,12 +512,21 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 // (Narrative pinning is now handled by pure CSS sticky for maximum smoothness)
 
 // ===== INITIALIZATION =====
-window.addEventListener('load', () => {
-    // Trigger reveals
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (!loader) return;
+
     document.body.classList.add('loaded');
 
+    // Orchestrated reveal: start with hero
     const hero = document.querySelector('.hero');
     if (hero) hero.classList.add('visible');
+}
+
+window.addEventListener('load', () => {
+    // Hide loader after the writing animation (approx 3.5s)
+    // We use a minimum time to ensure the animation is seen
+    setTimeout(hideLoader, 3500);
 
     console.log('%c✨ reimaginetec', 'font-size: 20px; font-weight: bold; color: #00f2ff;');
     console.log('%cPremium glassmorphic system loaded', 'font-size: 14px; color: #bababa;');
