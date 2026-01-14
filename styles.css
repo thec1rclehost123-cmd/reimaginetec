@@ -1919,7 +1919,11 @@ h6 {
     position: relative;
     z-index: 1;
     line-height: 1;
-    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, #f8fafc 0%, #00d2ff 50%, #f8fafc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.4));
+    animation: breathing-glow 4s ease-in-out infinite alternate;
 }
 
 .cta-actions {
