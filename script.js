@@ -513,16 +513,13 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // ===== INITIALIZATION =====
 window.addEventListener('load', () => {
-    // Hide loader
-    setTimeout(() => {
-        document.body.classList.add('loaded');
+    // Trigger reveals
+    document.body.classList.add('loaded');
 
-        // Orchestrated reveal: start with hero
-        const hero = document.querySelector('.hero');
-        if (hero) hero.classList.add('visible');
-    }, 1500); // 1.5s loader time
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.add('visible');
 
-    console.log('%c✨ Reimagine', 'font-size: 20px; font-weight: bold; color: #00f2ff;');
+    console.log('%c✨ reimaginetec', 'font-size: 20px; font-weight: bold; color: #00f2ff;');
     console.log('%cPremium glassmorphic system loaded', 'font-size: 14px; color: #bababa;');
 
     // Initialize Card Focus Observer for Execution Models
